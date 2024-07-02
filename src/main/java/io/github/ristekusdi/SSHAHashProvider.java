@@ -64,12 +64,6 @@ public class SSHAHashProvider implements PasswordHashProvider {
             // Fail silently
         }
 
-        System.out.println("rawPassword = " + rawPassword);
-        System.out.println("hash = " + hash);
-        System.out.println("hashedPassword = " + hashedPassword);
-        System.out.println("str salt = " + strSalt);
-        System.out.println("byte salt = " + Arrays.toString(passwordCredentialModel.getPasswordSecretData().getSalt()));
-
         return hashedPassword.equals(hash);
     }
 
